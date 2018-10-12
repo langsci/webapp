@@ -1,0 +1,822 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+\newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
+% Text styles
+\newcommand\textstyleInternetlink[1]{#1}
+\newcommand\textstyleWWviiiNumviz[1]{#1}
+\newcommand\textstyleWWviiiNumvizi[1]{\textrm{\textbf{#1}}}
+\newcommand\textstyleWWviiiNumvizii[1]{#1}
+\newcommand\textstyleWWviiiNumviziii[1]{#1}
+\newcommand\textstyleWWviiiNumiiiz[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumiiizi[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumvz[1]{#1}
+\newcommand\textstyleWWviiiNumvzi[1]{#1}
+\newcommand\textstyleWWviiiNumvzii[1]{#1}
+\newcommand\textstyleWWviiiNumvziii[1]{#1}
+\newcommand\textstyleWWviiiNumivz[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumivzii[1]{\textsf{#1}}
+\newcommand\textstyleWWviiiNumiz[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumizi[1]{\texttt{#1}}
+\newcommand\textstyleWWviiiNumizii[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumiiz[1]{\textrm{#1}}
+\newcommand\textstyleWWviiiNumiizi[1]{\texttt{#1}}
+\newcommand\textstyleWWviiiNumiizii[1]{\textrm{#1}}
+\newcommand\textstyleappleconvertedspace[1]{#1}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+\raggedbottom
+% Paragraph styles
+\renewcommand\familydefault{\rmdefault}
+\newenvironment{styleStandard}{\renewcommand\baselinestretch{1.0}\setlength\leftskip{0cm}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0in plus 1pt}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\fontsize{11pt}{13.2pt}\selectfont\writerlistlabel\ignorespaces}{\unskip\vspace{0.111in plus 0.0111in}\par}
+\newenvironment{styleListParagraph}{\renewcommand\baselinestretch{1.0}\setlength\leftskip{0.5in}\setlength\rightskip{0in plus 1fil}\setlength\parindent{0in}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0in plus 1pt}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\fontsize{11pt}{13.2pt}\selectfont\writerlistlabel\ignorespaces}{\unskip\vspace{0.111in plus 0.0111in}\par}
+\newenvironment{stylePlainText}{\renewcommand\baselinestretch{1.0}\setlength\leftskip{0cm}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0in plus 1pt}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\fontsize{10pt}{12.0pt}\selectfont\writerlistlabel\ignorespaces}{\unskip\vspace{0in plus 1pt}\par}
+\newenvironment{styleDefault}{\renewcommand\baselinestretch{1.0}\setlength\leftskip{0cm}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0in plus 1pt}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\writerlistlabel\ignorespaces}{\unskip\vspace{0in plus 1pt}\par}
+% List styles
+\newcommand\writerlistleftskip{}
+\newcommand\writerlistparindent{}
+\newcommand\writerlistlabel{}
+\newcommand\writerlistremovelabel{\aftergroup\let\aftergroup\writerlistparindent\aftergroup\relax\aftergroup\let\aftergroup\writerlistlabel\aftergroup\relax}
+\newcounter{listWWviiiNumvileveli}
+\newcounter{listWWviiiNumvilevelii}[listWWviiiNumvileveli]
+\newcounter{listWWviiiNumvileveliii}[listWWviiiNumvilevelii]
+\newcounter{listWWviiiNumvileveliv}[listWWviiiNumvileveliii]
+\renewcommand\thelistWWviiiNumvileveli{\arabic{listWWviiiNumvileveli}}
+\renewcommand\thelistWWviiiNumvilevelii{\arabic{listWWviiiNumvileveli}.\arabic{listWWviiiNumvilevelii}}
+\renewcommand\thelistWWviiiNumvileveliii{\arabic{listWWviiiNumvileveli}.\arabic{listWWviiiNumvilevelii}.\arabic{listWWviiiNumvileveliii}}
+\renewcommand\thelistWWviiiNumvileveliv{\arabic{listWWviiiNumvileveli}.\arabic{listWWviiiNumvilevelii}.\arabic{listWWviiiNumvileveliii}.\arabic{listWWviiiNumvileveliv}}
+\newcommand\labellistWWviiiNumvileveli{\textstyleWWviiiNumviz{\thelistWWviiiNumvileveli}}
+\newcommand\labellistWWviiiNumvilevelii{\textstyleWWviiiNumvizi{\thelistWWviiiNumvilevelii}}
+\newcommand\labellistWWviiiNumvileveliii{\textstyleWWviiiNumvizii{\thelistWWviiiNumvileveliii}}
+\newcommand\labellistWWviiiNumvileveliv{\textstyleWWviiiNumviziii{\thelistWWviiiNumvileveliv}}
+\newenvironment{listWWviiiNumvileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvileveli}\makebox[0cm][l]{\labellistWWviiiNumvileveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvilevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvilevelii}\makebox[0cm][l]{\labellistWWviiiNumvilevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvileveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvileveliii}\makebox[0cm][l]{\labellistWWviiiNumvileveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvileveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvileveliv}\makebox[0cm][l]{\labellistWWviiiNumvileveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistWWviiiNumiiileveli{\textstyleWWviiiNumiiiz{[F0B7?]}}
+\newcommand\labellistWWviiiNumiiilevelii{\textstyleWWviiiNumiiizi{[F0A7?]}}
+\newcommand\labellistWWviiiNumiiileveliii{\textstyleWWviiiNumiiizi{[F0A7?]}}
+\newcommand\labellistWWviiiNumiiileveliv{\textstyleWWviiiNumiiizi{[F0A7?]}}
+\newenvironment{listWWviiiNumiiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiiileveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiiilevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiiileveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiiileveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\newcounter{listWWviiiNumvleveli}
+\newcounter{listWWviiiNumvlevelii}[listWWviiiNumvleveli]
+\newcounter{listWWviiiNumvleveliii}[listWWviiiNumvlevelii]
+\newcounter{listWWviiiNumvleveliv}[listWWviiiNumvleveliii]
+\renewcommand\thelistWWviiiNumvleveli{\arabic{listWWviiiNumvleveli}}
+\renewcommand\thelistWWviiiNumvlevelii{\arabic{listWWviiiNumvleveli}.\arabic{listWWviiiNumvlevelii}}
+\renewcommand\thelistWWviiiNumvleveliii{\arabic{listWWviiiNumvleveli}.\arabic{listWWviiiNumvlevelii}.\arabic{listWWviiiNumvleveliii}}
+\renewcommand\thelistWWviiiNumvleveliv{\arabic{listWWviiiNumvleveli}.\arabic{listWWviiiNumvlevelii}.\arabic{listWWviiiNumvleveliii}.\arabic{listWWviiiNumvleveliv}}
+\newcommand\labellistWWviiiNumvleveli{\textstyleWWviiiNumvz{\thelistWWviiiNumvleveli}}
+\newcommand\labellistWWviiiNumvlevelii{\textstyleWWviiiNumvzi{\thelistWWviiiNumvlevelii}}
+\newcommand\labellistWWviiiNumvleveliii{\textstyleWWviiiNumvzii{\thelistWWviiiNumvleveliii}}
+\newcommand\labellistWWviiiNumvleveliv{\textstyleWWviiiNumvziii{\thelistWWviiiNumvleveliv}}
+\newenvironment{listWWviiiNumvleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvleveli}\makebox[0cm][l]{\labellistWWviiiNumvleveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvlevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvlevelii}\makebox[0cm][l]{\labellistWWviiiNumvlevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvleveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvleveliii}\makebox[0cm][l]{\labellistWWviiiNumvleveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumvleveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\stepcounter{listWWviiiNumvleveliv}\makebox[0cm][l]{\labellistWWviiiNumvleveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistWWviiiNumivleveli{\textstyleWWviiiNumivz{[F0B7?]}}
+\newcommand\labellistWWviiiNumivlevelii{\textstyleWWviiiNumivz{[F0B7?]}}
+\newcommand\labellistWWviiiNumivleveliii{\textstyleWWviiiNumivzii{•}}
+\newcommand\labellistWWviiiNumivleveliv{\textstyleWWviiiNumivzii{•}}
+\newenvironment{listWWviiiNumivleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumivleveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumivlevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumivlevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumivleveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumivleveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumivleveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumivleveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistWWviiiNumileveli{\textstyleWWviiiNumiz{[F0B7?]}}
+\newcommand\labellistWWviiiNumilevelii{\textstyleWWviiiNumizi{o}}
+\newcommand\labellistWWviiiNumileveliii{\textstyleWWviiiNumizii{[F0A7?]}}
+\newcommand\labellistWWviiiNumileveliv{\textstyleWWviiiNumiz{[F0B7?]}}
+\newenvironment{listWWviiiNumileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumileveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumilevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumilevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumileveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumileveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumileveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumileveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistWWviiiNumiileveli{\textstyleWWviiiNumiiz{[F0B7?]}}
+\newcommand\labellistWWviiiNumiilevelii{\textstyleWWviiiNumiizi{o}}
+\newcommand\labellistWWviiiNumiileveliii{\textstyleWWviiiNumiizii{[F0A7?]}}
+\newcommand\labellistWWviiiNumiileveliv{\textstyleWWviiiNumiiz{[F0B7?]}}
+\newenvironment{listWWviiiNumiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiileveli}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiilevelii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiileveliii}\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listWWviiiNumiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{0.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0cm}}\def\writerlistlabel{\makebox[0cm][l]{\labellistWWviiiNumiileveliv}\hspace{0cm}\writerlistremovelabel}}}{}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\title{}
+\author{960optiplex}
+\date{2016-04-24}
+\begin{document}
+\clearpage\setcounter{page}{1}\begin{styleStandard}\bfseries
+Evaluative Markers (EMs) in KiLega (D25) As Degree Quantifiers
+\end{styleStandard}
+
+
+\begin{styleStandard}\bfseries
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Kasangati K. W. Kinyalolo
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Kirkwood Community College, Cedar Rapids, IA
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \href{mailto:Kasangati.Kinyalolo@kirkwood.edu}{\textstyleInternetlink{Kasangati.Kinyalolo@kirkwood.edu}}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ACAL 47
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ UC Berkeley
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Berkeley, CA
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ March 23-26, 2016
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\textbf{1. Diminutives (}\textbf{\textsc{di}}\textbf{) \& Augmentatives (}\textbf{\textsc{au}}\textbf{)}
+\end{styleStandard}
+
+
+\setcounter{listWWviiiNumvileveli}{0}
+\begin{listWWviiiNumvileveli}
+\item 
+\setcounter{listWWviiiNumvilevelii}{0}
+\begin{listWWviiiNumvilevelii}
+\item 
+\begin{styleListParagraph}
+KiLega has two sets of EMs with identity of meaning. When an EM is affixed to an N, the result is a one-word construction (EM-N); when it appears as a prefix to a semantically vacuous –\textbf{á}, the result is a two-word construction (EM-á XP). Two notable facts: (i) \textbf{\textit{wa}} and \textbf{\textit{ba}} (‘real’; On degree reading of ‘real’, see Bolinger 1972; Morzycki 2009) (used in evaluation of (human) character) have no corresponding EMs that occur in one-word structure; (ii) the diminutive \textbf{\textit{si}}{}- has no homophonous noun class prefix (NC). 
+\end{styleListParagraph}
+
+\end{listWWviiiNumvilevelii}
+\end{listWWviiiNumvileveli}
+\begin{styleStandard}
+(1)\ \ \ \ \ \ a.\ \ \textbf{\textit{ka}}{}-, \textbf{\textit{si}}{}-, \textbf{\textit{tu}}{}- \ \ \textbf{\textit{ká}}, \textbf{\textit{syá}}, \textbf{\textit{twá}} \ \ \ (\textsc{di})
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ b.\ \ \textbf{\textit{ki}}{}-, \textbf{\textit{lu}}{}-, \textbf{\textit{bi}}{}- \ \ \ \textbf{\textit{kyá}}, \textbf{\textit{lwá}}, \textbf{\textit{byá}}\ \ (\textsc{au})
+\end{styleStandard}
+
+
+\begin{styleListParagraph}
+c.\textbf{ \ \ }\ \ \ \ \textbf{\textit{wa}}, \textbf{\textit{ba}} \ \ \ \ (‘real’)
+\end{styleListParagraph}
+
+
+\begin{listWWviiiNumiiileveli}
+\item 
+\begin{styleStandard}
+For scaling a quality, whether up or down from a norm, EMs are intensifiers (Bolinger 1972: 17). Sizes below the norm are \textit{small}; sizes above the norm are \textit{big}. 
+\end{styleStandard}
+
+\item 
+\begin{styleStandard}
+This talk examines data which suggest that EMs are nominal degree quantifiers, setting aside issues of whether diminutive or augmentative formation involves derivation or inflection (Mufwene 1980; Bresnan \& Mchombo 1995), class shift (Shepardson 1982; Stump 1992, 1993), a class prefix that moonlights in a noun spine (Déchaine et al. 2014), or a null head (Carstens 1993).
+\end{styleStandard}
+
+\end{listWWviiiNumiiileveli}
+\setcounter{listWWviiiNumvleveli}{0}
+\begin{listWWviiiNumvleveli}
+\item 
+\setcounter{listWWviiiNumvlevelii}{1}
+\begin{listWWviiiNumvlevelii}
+\item 
+\begin{styleListParagraph}
+Distribution
+\end{styleListParagraph}
+
+
+\setcounter{listWWviiiNumvleveliii}{0}
+\begin{listWWviiiNumvleveliii}
+\item 
+\begin{styleListParagraph}
+In many cases, an NC and an EM occur in complementary distribution. When an NC is homophonous with an EM, the evaluative reading for that N is non-existent (see Shepardson 1982 for Swahili; Stump 1992, 1993 for Kikuyu \& Mwera). Thus, nouns with NC \textbf{\textit{ki}}{}- (cl. 7), \textbf{\textit{bi}}{}- (cl. 8), \textbf{\textit{lu}}{}- (cl. 11), \textbf{\textit{ka}}{}- (cl. 12), \textbf{\textit{tu}}{}- (cl. 13) can only form their diminutive or augmentative with a two-word construction. 
+\end{styleListParagraph}
+
+\end{listWWviiiNumvleveliii}
+\end{listWWviiiNumvlevelii}
+\end{listWWviiiNumvleveli}
+\begin{styleStandard}
+(2)\ \ a.\ \ \textbf{\textit{mu}}\textit{{}-simba}\ \ b.\ \ \ \ \textbf{\textit{ki}}\textit{{}-simba\ \ \ \ \ \ \ \ }c.\ \ \textbf{\textit{ki}}\textit{{}-mena}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ 1unmarried adult\ \ \ \ \ \ \textsc{au}{}-unmarried adult\ \ \ \ \ \ 7crocodile
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ ‘unmarried man/woman’\ \ \ \ \ \ ‘old bachelor’/‘spinster’\ \ ‘crocodile’ / *’big croco’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ d.\ \ \textbf{\textit{mu}}\textit{{}-lúme}\ \ e.\ \ \ \ \textbf{\textit{ka}}\textit{{}-lúme\ \ \ \ \ \ \ \ }f.\textit{\ \ }\textbf{\textit{ka}}\textit{{}-séti}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ 1male\ \ \ \ \ \ \textsc{di}{}-male \ \ \ \ \ \ \ \ \ \ \ \ 12antelope\ \ \ \ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ ‘man’\ \ \ \ \ \ ‘small/despicable man’\ \ \ \ ‘antelope’/*’small antelope’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+1.2.2 \ \ Two observations: 
+\end{styleStandard}
+
+
+\begin{listWWviiiNumivleveli}
+\item 
+\begin{styleStandard}
+\ “…the noun class marking and aug-dim marking functions are independent […]. Diminutive size is not an inherent property of the Ki-Vi noun class.” (Shepardson 1982: 56)
+\end{styleStandard}
+
+\item 
+\begin{styleStandard}
+\ “Not all members of gender 12/13 are diminutives of other nouns.” (Stump 1993: 9)
+\end{styleStandard}
+
+\end{listWWviiiNumivleveli}
+\begin{styleStandard}
+1.2.3\ \ A reasonable explanation is that “[t]he augmentative and diminutive derivation does not involve a class prefix; instead, it involves a null head” (Carstens 1993: 156). 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+1.2.4\ \ Once the claim that DI \& AU are NCs is given up, \ a simple analysis of the facts is possible. E.g.:
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(3)\ \ \ \ a.\ \ \textbf{\textit{ki}}{}-: [Cl\textsubscript{7}]\ \ \ \ \ \ b.\ \ \textbf{\textit{ki}}{}-: [EM]
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ c.\ \ \textbf{\textit{ka}}{}-: [Cl\textsubscript{12}]\ \ \ \ \ \ d.\ \ \textbf{\textit{ka}}{}-: [EM]
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ e.\ \ \ \ \ \ \ \ \ \ \ \ f.\ \ \textbf{\textit{si}}{}-: [EM]\ \ (cf. 1.1, (ii))
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ [Cl\textsubscript{n}] marks a noun as the \textit{ungraded existent} (Sapir 1944), excluding the possibility that such a noun can be thought of as occupying a position on a sliding scale of values of “more” and “less.” [EM] acts as a degree operator. In (2b), for e.g., \textbf{\textit{ki}}{}- operates over a (covert) temporal variable. \ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+1.2.5 The two-word construction is the only option when N is overtly marked with [Cl\textsubscript{n}]: 
+\end{styleStandard}
+
+
+\begin{listWWviiiNumileveli}
+\item 
+\begin{styleListParagraph}
+when N, denoting one or more individuals, does not exhibit the singular/plural distinction:
+\end{styleListParagraph}
+
+\end{listWWviiiNumileveli}
+\begin{styleStandard}
+(4)\ \ \ \ a.\ \ \textit{m\u{u}sá}\ \ \ \ \ \ ‘insect(s) \textit{m\u{u}sá}’\ \  \ \ (cl. 3)\ \ \ \ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ b.\ \ \textit{lusungu}\ \ \ \ \ \ ‘black wasp(s)’ \ \ \ \ (cl. 11)
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ c.\ \ \textit{l\u{u}to}\ \ \ \ \ \ \ \ ‘(sp. of) berry/ies’\ \ (cl. 11)
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ ‘(thorny) vine(s) on which the \textit{l\u{u}to} berries grow in bunches’ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(5)\ \ \ \ a. \ \ \textit{m\u{u}sá\ \ \ \ \ \ }b.\textit{\ \ *\ \ }\textbf{\textit{kă}}\textit{sá} \ \ \ \ \ \ \ \ c.\ \ \textit{*\ \ }\textbf{\textit{k\u{\i}}}\textit{sá\ \ }
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ d.\ \ \textbf{\textit{ká}}\textit{ \ \ \ m\u{u}sá}\ \ e.\ \ \textbf{\textit{kyá}}\textit{ \ m\u{u}sá}
+\end{styleStandard}
+
+
+\begin{listWWviiiNumileveli}
+\item 
+\begin{styleListParagraph}
+when N is a mass noun (found in cl. 3 through cl. 15):
+\end{styleListParagraph}
+
+\end{listWWviiiNumileveli}
+\begin{styleStandard}
+(6)\ \ \ \ a.\ \ \textbf{\textit{mu}}\textit{punga}\ \ \ \ ‘rice’\ \  \ \ (cl. 3)\ \ \ \ \ \ \ \ \ \ b.\ \ \textbf{\textit{mi}}\textit{kilá}\ \ \ \ ‘blood’\ \ (cl. 4)
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ c.\ \ \textbf{\textit{i}}\textit{búmba}\ \ \ \ \ \ ‘white clay’ (cl. 5)\ \ \ \ \ \ \ \ \ \ d.\ \ \textbf{\textit{mă}}\textit{zi}\ \ \ \ ‘water’\ \ (cl. 6)\ \ \ \ 
+\end{styleStandard}
+
+
+\begin{styleListParagraph}
+1.2.6 The two-word construction is also possible:
+\end{styleListParagraph}
+
+
+\begin{listWWviiiNumiileveli}
+\item 
+\begin{styleListParagraph}
+when a noun partaking in the singular/plural distinction is marked with [Cl\textsubscript{n}]: 
+\end{styleListParagraph}
+
+\end{listWWviiiNumiileveli}
+\begin{styleStandard}
+(7)\ \ \ \ a. \ \ \textbf{\textit{mu}}\textit{simba}\ \ \ \ \ \ b.\ \ \textbf{\textit{kyá}}\textit{ \ musimba}\ \ \ \ \ \ c.\ \ \textbf{\textit{ká}}\textit{ \ musimba}
+\end{styleStandard}
+
+
+\begin{listWWviiiNumileveli}
+\item 
+\begin{styleListParagraph}
+when N is marked with [\textsc{em}] in instances of recursive evaluation, indicating what Bolinger’s (1972: 15) terms “[m]anifestations of degree and intensity […] associated with […] nouns”.
+\end{styleListParagraph}
+
+\end{listWWviiiNumileveli}
+\begin{styleStandard}
+(8)\ \ \ \ a. \ \ \textbf{\textit{l\u{u}}}\textit{{}-zi} \ \ ‘river’\ \ \ \ b.\ \ \textbf{\textit{kă}}\textit{{}-zi}\ \ ‘small river’\ \ \ \ c.\ \ \textbf{\textit{syá}}\textit{ \ \ }\textbf{\textit{kă}}\textit{{}-zi}\ \ ‘brook(let)’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(9)\ \ \ \ \ \ \textbf{\textit{kyá}}\textit{ \ }\textbf{\textit{ki}}\textit{simba} \ \ ‘very old bachelor’ / ‘big spinster’ (? translation)
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ The recursive EM phenomenon is found in, a.o., KiKongo (Mufwene 1980a), Swahili (Shepardson 1982), Kikuyu (Stump 1993). Compared to (9), the facts in (9’) suggest that recursivity is dealt with in a language specific way. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ (9’)\ \ a.\ \ \textbf{\textit{bí}}\textit{{}-b-ána} \ \ \ ‘small children’ \ \ \ \ \ \ \ \ \ \ b. \ \ \textbf{\textit{tu}}\textit{{}-b-ána} \ ‘small children’\ \ [KiKongo]
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ c. \ \ \textbf{\textit{tu}}\textit{{}-}\textbf{\textit{bí}}\textit{{}-b-ána} \ \ ‘very small children’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+1.2.7\ \ When Number, mass and degree are overtly expressed, the one-word construction is unavailable; this gives rise to a two-word construction.
+\end{styleStandard}
+
+
+\begin{styleStandard}\bfseries
+2. Motivating the Degree Quantifier Analysis of EMs
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.1\ \ Mass \& plural nouns pattern in many ways cross-linguistically (Bolinger 1972; Mufwene 1980b, 1984, 1986; Jackendoff 1991; Gillon 1992; a.o.). 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\textit{\ \ }Higginbotham (1995): a mass or count quantifier is compatible with a mass or count noun. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ Mufwene (1984): individuated and non-individuated nouns and quantifiers.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ Chierchia (1998: 55-57) on English Det(erminer)s / Quant(ifier)s: 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(10)\ \ a.\ \ Some Dets/Quants occur only with mass nouns (e.g., \textit{little}, \textit{much}). 
+\end{styleStandard}
+
+
+\begin{styleListParagraph}
+\ \ \ \ b.\ \ Some Dets/Quants occur only with count nouns (e.g., \textit{every}, \textit{each}, \textit{several}, \textit{few}, \textit{both}, \textit{many}). 
+\end{styleListParagraph}
+
+
+\begin{styleListParagraph}
+\ \ \ \ c.\ \ Some Dets/Quants occur only with plural and mass nouns (e.g., \textit{a lot}, \textit{all}, \textit{plenty of}, \textit{most}).
+\end{styleListParagraph}
+
+
+\begin{styleListParagraph}
+\textit{\ \ \ \ }d.\textit{\ \ }Some Dets/Quants are unrestricted (e.g., \textit{the}, \textit{some}, \textit{any}, \textit{no}).
+\end{styleListParagraph}
+
+
+\begin{styleStandard}
+2.2\ \ NCs show no restriction in combining with count nouns (11a, c, e, g) or non-count nouns (11b, d, f, h). \ In traditional terms, (11a-f) bear singular morphology, (11g-h) do plural morphology. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(11)\ \ \ \ a.\ \ \textbf{\textit{mu}}{}-\textit{téndé}\ \ \ \ ‘frog’\ \ \ \ \ \ \ \ \ \ \ \ b.\ \ \textbf{\textit{m\u{u}}}\textit{ki}\ \ \ \ \ \ ‘smoke’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ c.\ \ \textbf{\textit{lu}}\textit{{}-keníkéni\ \ }\ \ ‘firefly’ / ‘star’\textit{\ \ \ \ \ \ \ \ }d.\textit{ \ \ }\textbf{\textit{lu}}\textit{to \ / }\textbf{\textit{lw}}\textit{ito\ \ \ \ }‘ashes’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ e.\ \ \textbf{\textit{ka}}\textit{{}-síbá}\ \ \ \ ‘(lady) alto’\ \ \ \ \ \ \ \ \ \ f.\ \ \textbf{\textit{ka}}\textit{bénga\ \ \ \ }‘disrespect’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ g.\ \ \textbf{\textit{tu}}\textit{{}-séti}\ \ \ \ ‘antelopes’\ \ \ \ \ \ \ \ \ \ h.\ \ \textbf{\textit{tu}}\textit{bí\ \ \ \ \ \ \ \ }‘feces’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.3\ \ EMs are not sensitive to Number; rather, they are sensitive to the count/mass noun distinction: \textit{syá, ká, kyá,} \&\textit{ lwá} only combine with individuated, not with non-individuated, nouns (see Mufwene 1980b): 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(12)\ \ a.\ \ \textbf{\textit{syá}}\ \ \textit{lu-keníkéni\ \ \ \ \ \ }b.\textit{\ \ *\ \ }\textbf{\textit{syá}}\textit{ \ \ luto \ / lwito}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\textit{\ \ }\ \ \ \ \textsc{di}\ \ 11firely/11star\ \ \ \ \ \ \ \ \ \ \textsc{di} \ \ \ 11ashes
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ ‘small/tiny firefly/star’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ c.\ \ \textbf{\textit{ká}}\ \ \textit{mu-téndé}\ \ \ \ \ \ d.\ \ *\ \ \textbf{\textit{ká}}\textit{\ \ \ \ mupunga}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\textit{\ \ }\ \ \ \ \textsc{di}\ \ 3frog\ \ \ \ \ \ \ \ \ \ \ \ \textsc{di\ \ \ \ 3}rice
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ ‘small frog’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.4\ \ In Meeussen (1960), \textsc{di} \textit{tu}{}- is [+\textsc{pl}] (of \textbf{\textit{si}}{}-, cl. 19 \& \textbf{\textit{ka}}{}-, cl. 13). A similar view is found in Stump (1993: 8). E.g.: “In Kikuyu, diminutive nouns belong to gender 12/13, characterized by the class 12 prefix \textit{ka- }in the singular and the class 13 prefix \textit{tu- }in the plural.” Interestingly, \textit{twá} combines with mass and plural nouns, the latter being ambiguous between count \& mass nouns. A similar observation is made for Lingala by Mufwene (1980b): 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(13)\ \  \ \ \ \textbf{\textit{tw}}\textit{{}-ilyá \ \ \ tú-tú-no.\ \ \ \ \ \ }(14)\ \ \textbf{\textit{twá}}\textit{ \ \ magomá \ \ \ tú-tú-no.}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \textsc{di \ \ \ }5food \ \textsc{13-13-dem\ \ \ \ \ \ \ \ \ \ di} \ \ \ \ \ \ \ 6plantain\ \ \textsc{13-13-dem}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\textsc{\ \ }\ \ ‘Here is a little bit of food.’ \ \ \ \ \ \ a.\ \ ‘Here are small plantains.’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ b.\ \ ‘Here is a little bit of plantains.’ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(15)\ \ a.\ \ \textbf{\textit{twá}} \textit{luto / lwito}\ \ \ \ \ \ b.\ \ *\ \ \textbf{\textit{twá}}\textit{ \ lukeníkéni}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.5\ \ Like \textsc{di} \textit{twá}, \textsc{au} \textit{byá} combines with mass and plural nouns: 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(16)\ \ \textbf{\textit{byá\ \ }}\textit{mikilá}\ \ \ \ \ \ (17)\ \ \textbf{\textit{byá}}\textit{\ \ mi-téndé.\ \ \ \ }
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \textsc{au \ \ }4blood\ \ \ \ \ \ \ \ \ \ \ \ \textsc{au}\ \ 4frog\ \ \ \ \ \ \ \ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ ‘a large amount of blood’\ \ \ \ a.\ \ ‘(very) big frogs’\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.\ \ ‘a large number of frogs’ \ \ \ \ \ \ 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \ \ \ \ \ \ c.\ \ ‘a large amount of frog meat’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(18)\ \  \ \ \ \textbf{\textit{byá}}\textit{ \ \ \ m\u{u}ki.\ \ \ \ \ \ }
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ \textsc{au} \ \ \ \ \ \ \ 3smoke
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ \ ‘a large amount of smoke.’
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.6\ \ The French degree quantifier \textit{beaucoup} combines syntactically with a mass or a plural noun, but not with a singular noun (Kayne 1975; Obenauer 1983; Doetjes 1997; a.o.). 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(19)\ \ a.\ \ \textit{beaucoup d’encre}\ \ b.\ \ *\ \ \textit{beaucoup de linguiste }\ \ \ \ c.\ \ beaucoup de\textit{ linguistes} 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+\ \ \ KiLega degree quantifier –\textit{\u{\i}ngí} behaves like French \textit{beaucoup}. Interestingly, its distribution is similar to that of EMs \textit{twá} \& \textit{byá} noted above. This is not accidental on the assumption that EM is a quantifier.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+(20)\ \ a.\ \ \textit{mu-punga mw-\u{\i}ngí\ \ \ \ \ \ }b.\ \ *\ \ \textit{mu-téndé \ mw-\u{\i}ngí}
+\end{styleStandard}
+
+
+\begin{styleListParagraph}
+\ \ c.\ \ \textit{mi-téndé z-\u{\i}ngí}
+\end{styleListParagraph}
+
+
+\begin{styleStandard}
+2.7\ \ On the assumption that EMs are quantifiers, which cross-linguistically are sensitive to the mass/count noun distinction, one can elegantly capture the distribution of the EMs as noted above at no cost at all.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+2.8\ \ (13), (15a), (18) are unexpected if DI \textit{tu}{}-/\textit{twá}, \& AU \textit{bi}{}-/\textit{byá} (\& the corresponding agreement markers) are inherently plural. Clearly, \textit{tu}{}-/\textit{twá}, \& \textit{bi}{}-/\textit{byá} are unspecified for [+PL]. This raises questions about Number (see Mufwene, Carstens, e.g.) and what category turns an entity into a plural or a mass noun.
+\end{styleStandard}
+
+
+\begin{styleStandard}\bfseries
+3. Summary: EMs as Nominal Degree Quantifiers
+\end{styleStandard}
+
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{m{1.4879599in}m{0.54135984in}m{0.6087598in}m{1.0650599in}m{1.4608599in}}
+\hline
+\multicolumn{5}{m{5.4789596in}}{\textbf{\textsc{Table I: }}\textbf{Distribution of the quantifier –}\textbf{\textit{\u{\i}ngí}}\textbf{ \& EMs (not final)}}\\\hline
+ &
+ &
+ &
+\bfseries\scshape Individuated &
+\bfseries\scshape Non-individuated\\
+\textbf{\textsc{D}}\textbf{{}-}\textbf{\textsc{quantifiers}} &
+ &
+{}-\textbf{\u{\i}ngí} &
+\centering \bfseries\scshape * &
+\centering\arraybslash \bfseries\scshape ${\surd}$\\
+ &
+ &
+ &
+ &
+\\
+\bfseries\scshape Evaluative Markers &
+ &
+ &
+ &
+\\
+ &
+\textbf{ka}{}- &
+\textbf{k-}á &
+\centering ${\surd}$ &
+\centering\arraybslash *\\
+\textbf{\textsc{Diminutive em}}\textbf{s} &
+\textbf{si}{}- &
+\textbf{sy}{}-á &
+\centering ${\surd}$ &
+\centering\arraybslash *\\
+ &
+\textbf{tu}{}- &
+\textbf{tw}{}-á &
+\centering * &
+\centering\arraybslash ${\surd}$\\
+ &
+ &
+ &
+ &
+\\
+ &
+\textbf{ki}{}- &
+\textbf{ky}{}-á &
+\centering ${\surd}$ &
+\centering\arraybslash *\\
+\textbf{\textsc{Augmentative em}}\textbf{s} &
+\textbf{lu}{}- &
+\textbf{lw}{}-á &
+\centering ${\surd}$ &
+\centering\arraybslash *\\
+ &
+\textbf{bi}{}- &
+\textbf{by}{}-á &
+\centering * &
+\centering\arraybslash ${\surd}$\\\hline
+\end{supertabular}
+\end{flushleft}
+\begin{styleStandard}\bfseries
+4.\ \ References
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Bolinger, Dwight 1972. \textit{Degree Words}. \ The Hague: Mouton.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Bresnan, Joan \& Sam A. Mchombo 1995. \ The Lexical Integrity Hypothesis: Evidence from Bantu. \ \textit{Natural Language and Linguistic Theory} 13: 181-254.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Carstens, Vicki M. 1993. On Nominal Morphology and DP Structure. In Mchombo, Sam A. Ed., \textit{Theoretical Aspects of Bantu Grammar}. Stanford, CA: CSLI Publications, 151-180. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Chierchia, Gennaro 1998. Plurality of mass nouns and the notion of “semantic parameter”. In Rothstein, S. Ed., \textit{Events and Grammar}. Kluwer Academic Press, 53-103. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Déchaine, Rose-Marie, Raphaël Girard, Calisto Mudzingwa, and Martina Wiltschko 2014. The Internal Syntax of Shona Class Prefixes. \textit{Language Sciences} 43: 18-46.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Doetjes, Jenny S. 1997. \textit{Quantifiers and Selection. On the Distribution of Quantifying Expressions in}\textit{ }\textit{French, Dutch and English}. The Hague: Holland Academic Graphics.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Doetjes, Jenny S. 2001. Beaucoup est Ailleurs. Expressions de degré et sous-spécification catégorielle.\textstyleappleconvertedspace{~In }Bok-Bennema et al. \textit{Adverbial Modification: Selected Papers from the Fifth Colloquium on Romance Linguistics, }\textit{Groningen, 10-12 September 1998}\textit{. }125-138\textit{.}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Gillon, Brendan S. 1992. \ Towards a common semantics for English count and mass nouns.\textstyleappleconvertedspace{~}\textit{Linguistics and Philosophy}\textstyleappleconvertedspace{~}15: 597-639.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Higginbotham, James 1995. Mass and count quantifiers.\textstyleappleconvertedspace{~In Bach, Emmon, Eloise Jelinek, Angelika Kratzer \& Barbara H. Partee }\textit{Quantification in Natural Languages}. Kluwer Academic Publishers, 383-419.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Jackendoff, Ray 1991. Parts and boundaries. \textit{Cognition}\textstyleappleconvertedspace{~}41: 9-45.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Kayne, Richard S. 1975. \textit{French syntax: The transformational cycle}. Cambridge, MA: The MIT Press.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Lumsden, John S. 1992. Underspecification in Grammatical and Natural Gender. \textit{Linguistic Inquiry}\textstyleappleconvertedspace{ 23}: 469-486.
+\end{styleStandard}
+
+
+\begin{stylePlainText}
+Meeussen, Achille E. \ 1960. \textit{Eléments de Grammaire Lega}. \ Tervuren: MRAC.
+\end{stylePlainText}
+
+
+\begin{styleStandard}
+Morzycki, Marcin 2009. Degree Modification of Gradable Nouns: Size Adjectives and Adnominal Degree Morphemes. \textit{Natural Language Semantics} 17: 175–203.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Mufwene, Salikoko S. 1980a. Bantu Class Prefixes: Inflectional or Derivational? \textit{Chicago Linguistic Society} 16: 246-258.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Mufwene, Salikoko S. 1980b. Number, countability and markedness in Lingala \textit{li-/ma- }noun class. \textit{Linguistics} 18: 1019-52.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Mufwene, Salikoko S. 1981. Non-individuation and the count/mass distinction. \textit{Chicago Linguistic Society} 17: 221-238. 
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Mufwene, Salikoko S. 1984. The Count/Mass Distinction and the English Lexicon. \textit{Chicago Linguistic Society} 20: 200-221.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Mufwene, Salikoko S. 1986. \ Number Delimitation in Gullah. \textit{American Speech} 61: 33-60.
+\end{styleStandard}
+
+
+\begin{stylePlainText}
+N’Sanda, Wamenka \ 1992. \textit{Récits Épiques des Lega du Zaïre}. Tome I \& Tome II. Tervuren: MRAC.
+\end{stylePlainText}
+
+
+\begin{stylePlainText}
+Obenauer, Hans-Georg 1983. Une quantification non canonique : la « quantification à distance ». \textit{Langue française} 58: 66-88.
+\end{stylePlainText}
+
+
+\begin{styleDefault}
+Sapir, Edward 1944. Grading, A Study in Semantics. \ \textit{Philosophy of Science} 11: 93-116.
+\end{styleDefault}
+
+
+\begin{styleStandard}
+\textstyleappleconvertedspace{Shepardson, Kenneth N. 1982. An Integrated Analysis of Swahili Augmentative-Diminutives. }\textstyleappleconvertedspace{\textit{Studies in African Linguistics}}\textstyleappleconvertedspace{ 13: 53-76.}
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Stump, Gregory T. 1992. The Adjacency Condition and the Formation of Diminutives in Mwera and Kikuyu. \textit{Proceedings of the Eighteenth Annual Meeting of the Berkeley Linguistics} \textit{Society: General Session and Parasession on The Place of Morphology in a Grammar}. pp. 441-452.
+\end{styleStandard}
+
+
+\begin{styleStandard}
+Stump, Gregory T. 1993. \ How Peculiar is Evaluative Morphology. \ \textit{Journal of Linguistics} 29: 1-36.
+\end{styleStandard}
+
+\end{document}
