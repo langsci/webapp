@@ -1,1 +1,0 @@
-/home/doc2tex/pypi/langsci/langscibibtex.py

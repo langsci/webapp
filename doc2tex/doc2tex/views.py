@@ -1,16 +1,20 @@
-from pyramid.view import view_config  
-from pyramid.response import Response
-import pyramid.httpexceptions as exc
 import os
 import re
 import uuid
-from .lib.langsci import  convert
-from .lib.sanitycheck import  LSPDir
-from .lib.normalizebib import  normalize
-from .lib import  sanityoverleaf
 import shutil
 import string
-from lib import langscibibtex
+import git
+import subprocess
+
+from pyramid.view import view_config  
+from pyramid.response import Response
+import pyramid.httpexceptions as exc
+
+from langsci.convertertools import  convert
+from langsci.sanity import  SanityDir
+from langsci.bibtools import  normalize
+#from .lib import  sanityoverleaf
+from langsci.bibtools import Record
 
 @view_config(route_name='doc2tex', renderer='templates/mytemplate.pt')
 def doc2tex(request):
@@ -18,11 +22,11 @@ def doc2tex(request):
 
   
 @view_config(route_name='doc2bib', renderer='templates/doc2bib.pt')
-def dco2bib(request): 
+def doc2bib(request): 
         biboutput = ''
         try:
                 bibinput = request.POST['bibinput'].strip()
-                biboutput = '\n\n'.join([langscibibtex.Record(l).bibstring for l in bibinput.split('\n')])
+                biboutput = '\n\n'.join([Record(l).bibstring for l in bibinput.split('\n')])
                 #biboutput = '\n'.join([str(len(l)) for l in bibinput.split('\n')])
         except KeyError:
                 #bibinput = "Paste your bibliography here" 
@@ -82,11 +86,43 @@ def sanitycheck(request):
   
 @view_config(route_name='overleafsanity', renderer='templates/sanitycheck.pt')
 def overleafsanity(request):   
-    overleafurl = request.GET['overleafurl']
-    d = sanityoverleaf.cloneorpull(overleafurl)
-    lspdir = LSPDir(os.path.join(d,"chapters"))
-    lspdir.check()
-    imgdir = LSPDir(os.path.join(d,"figures"))
+    def cloneorpull(url):
+        """
+        Make a git repository available locally. 
+        
+        The repo is cloned if not already available locally, otherwise, it is pull'ed.
+        
+        args:
+        url (str): the url string of the repository. It can be either the html URL or the git url
+        
+        returns
+        str: the file path to the local repo
+        
+        """
+        m = re.search('langsci/([0-9]{2,}a?)',url)
+        githubID = m.group(1)
+        print("GitHub ID found:", githubID)
+        giturl = "https://github.com/langsci/%s.git"%githubID
+        gitdir = os.path.join(os.getcwd(),githubID)
+        print("git repo is ", giturl)
+        try:
+            git.Repo.clone_from(giturl, gitdir)
+            print("cloned")
+        except git.exc.GitCommandError:
+            print("repo already in file system. Pulling")
+            cwd = os.getcwd()
+            print(gitdir)
+            os.chdir(gitdir)
+            subprocess.call(["git","pull"]) 
+            os.chdir(cwd)
+            print("pulled")
+        return gitdir 
+
+    githuburl = request.GET['githuburl']
+    d = cloneorpull(githuburl)
+    texdir = SanityDir(os.path.join(d,"chapters"),ignorecodes=[])
+    texdir.check()
+    imgdir = SanityDir(os.path.join(d,"figures"))
     imgdir.check()
     #shutil.rmtree(d)
     return {'project': 'doc2tex',
