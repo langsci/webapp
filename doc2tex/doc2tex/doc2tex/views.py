@@ -110,7 +110,10 @@ def githubsanity(request):
         
         """
         m = re.search('langsci/([0-9]{2,}a?)',url)
-        githubID = m.group(1)
+        try:            
+            githubID = m.group(1)
+        except AttributeError:
+            raise GitHubError(url)
         print("GitHub ID found:", githubID)
         giturl = "https://github.com/langsci/%s.git"%githubID
         gitdir = os.path.join(os.getcwd(),githubID)
@@ -129,7 +132,10 @@ def githubsanity(request):
         return gitdir 
 
     githuburl = request.GET['githuburl']
-    d = cloneorpull(githuburl)
+    try:
+        d = cloneorpull(githuburl)
+    except FileNotFoundError: 
+        raise GitHubError(githuburl)
     texdir = SanityDir(os.path.join(d,"."),ignorecodes=[])
     texdir.check()
     imgdir = SanityDir(os.path.join(d,"."),ignorecodes=[])
@@ -223,6 +229,18 @@ def wrongfileformat(exc, request):
     return {'project': 'doc2tex',
             'msg': msg }
             
+            
+    
+class GitHubError(Exception):
+    pass
+
+@view_config(context=GitHubError, renderer='templates/error.pt')
+def wronggithubID(url, request): 
+    #url = exc.args[0] if exc.args else "",""
+    msg =  'Not a valid LangSci ID on GitHub: %s' % url
+    return {'project': 'doc2tex',
+            'msg': msg }
+                        
              
 class Writer2LatexError(Exception):
     pass
