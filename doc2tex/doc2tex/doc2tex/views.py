@@ -181,14 +181,14 @@ def result(request):
     input_file = request.POST['docfile'].file
     filename = _upload(fn, input_file,('doc', 'docx', 'odt'))
     #convert file to tex
-    #try:
-    texdocument = convert(filename)
-    #except ValueError:
-        #raise FileFormatFailure(filename.split(".")[-1])
+    try:
+        texdocument = convert(filename)
+        texdocument.ziptex()    
+    except UnicodeEncodeError:
+        raise Writer2LatexError()
     #except IOError:
         #raise Writer2LatexError 
     #os.remove(filename)
-    texdocument.ziptex()    
     texttpl = (('raw',texdocument.text),
                ('mod',texdocument.modtext),
                ('chapter',texdocument.papertext),
@@ -252,9 +252,10 @@ def w2lerror(exc, request):
     filetype = exc.args[0] if exc.args else ""
     msg =  """The file could not be converted. Common causes are:
                  1. file format. *odt is best, *doc is also possible, *docx is the most problematic format 
-                 2. an automatic table of contents
-                 3. many graphics 
-                 4. complicated tables. Remove problematic elements from your file, save in another format and retry.
+                 2. Faulty Unicode
+                 3. an automatic table of contents
+                 4. many graphics 
+                 5. complicated tables. Remove problematic elements from your file, save in another format and retry.
     """ 
     return {'project': 'doc2tex',
             'msg': msg }
