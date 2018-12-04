@@ -57,12 +57,12 @@
 		</form>
 </li>
 <li>
-	<h3>Check an Overleaf project for compliance with the guidelines</h3> 
+	<h3>Check a <a href="www.github.com/langsci">Langsci project on GitHub</a> for compliance with the guidelines</h3> 
 	
-		<form action="/doc2tex/overleafsanity" method="get" enctype="multipart/form-data">
+		<form action="/doc2tex/githubsanity" method="get" enctype="multipart/form-data">
 		  <p>	
-		    Paste the URL of the Overleaf project you want to check
-		    <input name="overleafurl" type="textarea" size="50" />
+		    Paste the URL of the Github project you want to check
+		    <input name="githuburl" type="textarea" size="50" />
 		  </p>
 		  <input type="submit" value="Check" />
 		</form>

@@ -48,6 +48,8 @@
 		<ul class="nav nav-tabs">
 		    <li class="active"><a href="#rawtab" data-toggle="tab">raw</a></li>  
 		    <li class="navtabli" ><a href="#modtab" data-toggle="tab">mod</a></li>  
+		    <li class="navtabli" ><a href="#chaptertab" data-toggle="tab">chapter</a></li>  
+		    <li class="navtabli" ><a href="#preambletab" data-toggle="tab">preamble</a></li>  
 		</ul> 
 
 		<!-- Tab panes --> 
@@ -83,6 +85,19 @@
 			    <p class="wlsubmitter"> 
 				<a href="https://www.overleaf.com/docs?snip_uri=${zipurl}&engine=xelatex" target="_blank"> open in Overleaf </a>
 			    </p>
+<!-- 			</form>  -->
+		    </div>   
+		    <div class="tab-pane"  id="chaptertab"> 
+<!-- 			<form action="https://www.writelatex.com/docs" method="get" target="_blank">  -->
+			    <textarea name="snip"  rows="30" cols="70">${texttpl[2][1]} </textarea>  
+			    <p class="wlsubmitter"> 
+				<a href="https://www.overleaf.com/docs?snip_uri=${zipurl}&engine=xelatex" target="_blank"> open in Overleaf </a>
+			    </p>
+<!-- 			</form>  -->
+		    </div>   
+		    <div class="tab-pane"  id="preambletab"> 
+<!-- 			<form action="https://www.writelatex.com/docs" method="get" target="_blank">  -->
+			    <textarea name="snip"  rows="30" cols="70">${texttpl[3][1]} </textarea>  			    
 <!-- 			</form>  -->
 		    </div>   
 		</div>  
