@@ -5,10 +5,20 @@ import shutil
 import string
 import git
 import subprocess
+import sys  
+
+import locale
+def getpreferredencoding(do_setlocale = True):
+   return "utf-8"
+locale.getpreferredencoding = getpreferredencoding
+  
 
 from pyramid.view import view_config  
 from pyramid.response import Response
 import pyramid.httpexceptions as exc
+
+import logging
+log = logging.getLogger(__name__)
 
 from langsci.convertertools import  convert
 from langsci.sanity import  SanityDir
@@ -77,15 +87,15 @@ def sanitycheck(request):
     filename = _upload(fn, input_file,('tex', 'bib')) 
     filetype = filename.split('.')[-1]
     d = os.path.dirname(os.path.realpath(filename))
-    lspdir = LSPDir(d)
+    lspdir = SanityDir(d,ignorecodes=[])
     lspdir.check()  
     #shutil.rmtree(d)
     return {'project': 'doc2tex',
-            'files':lspdir.errors,
+            'files':lspdir.texterrors,
             'imgs':[]}
   
-@view_config(route_name='overleafsanity', renderer='templates/sanitycheck.pt')
-def overleafsanity(request):   
+@view_config(route_name='githubsanity', renderer='templates/sanitycheck.pt')
+def githubsanity(request):   
     def cloneorpull(url):
         """
         Make a git repository available locally. 
@@ -120,14 +130,14 @@ def overleafsanity(request):
 
     githuburl = request.GET['githuburl']
     d = cloneorpull(githuburl)
-    texdir = SanityDir(os.path.join(d,"chapters"),ignorecodes=[])
+    texdir = SanityDir(os.path.join(d,"."),ignorecodes=[])
     texdir.check()
-    imgdir = SanityDir(os.path.join(d,"figures"))
+    imgdir = SanityDir(os.path.join(d,"."),ignorecodes=[])
     imgdir.check()
     #shutil.rmtree(d)
     return {'project': 'doc2tex',
-            'files':lspdir.errors,
-            'imgs':imgdir.errors}
+            'files':texdir.texterrors,
+            'imgs':imgdir.imgerrors}
   
     
 def _upload(filename,f,accept):
@@ -136,10 +146,11 @@ def _upload(filename,f,accept):
     filetype = inputfn.split('.')[-1]
     if filetype not in accept:
         raise WrongFileFormatError(filetype,accept)
-    tmpdir = '%s'%uuid.uuid4()
+    tmpdir = '%s'%uuid.uuid4() 
     os.mkdir(os.path.join('/tmp',tmpdir))
     #tmpfile = '%s.%s' % (uuid.uuid4(),filetype)
     file_path = os.path.join('/tmp',tmpdir,inputfn)
+     
     # We first write to a temporary file to prevent incomplete files from
     # being used.
     temp_file_path = file_path + '~'
@@ -154,6 +165,7 @@ def _upload(filename,f,accept):
     output_file.close()
     # Now that we know the file has been fully saved to disk move it into place.
     os.rename(temp_file_path, file_path) 
+    #log.error('filepath: %s'% file_path)
     return file_path
       
 
@@ -163,17 +175,24 @@ def result(request):
     input_file = request.POST['docfile'].file
     filename = _upload(fn, input_file,('doc', 'docx', 'odt'))
     #convert file to tex
-    try:
-        texdocument = convert(filename)
-    except ValueError:
-        raise FileFormatFailure(filetype)
-    except IOError:
-        raise Writer2LatexError 
+    #try:
+    texdocument = convert(filename)
+    #except ValueError:
+        #raise FileFormatFailure(filename.split(".")[-1])
+    #except IOError:
+        #raise Writer2LatexError 
     #os.remove(filename)
     texdocument.ziptex()    
     texttpl = (('raw',texdocument.text),
-               ('mod',texdocument.modtext)
-              )
+               ('mod',texdocument.modtext),
+               ('chapter',texdocument.papertext),
+               ('preamble',"\n\n".join(["%Copy this to localcommands.tex",
+                                        texdocument.packages,
+                                        texdocument.environments,
+                                        texdocument.commands,
+                                        texdocument.counters,
+                                        ])
+              ))
     return {'project': 'doc2tex',
             'filename': fn,
             'texttpl': texttpl, 
