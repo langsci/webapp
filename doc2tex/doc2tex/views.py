@@ -87,7 +87,11 @@ def sanitycheck(request):
     filename = _upload(fn, input_file,('tex', 'bib')) 
     filetype = filename.split('.')[-1]
     d = os.path.dirname(os.path.realpath(filename))
-    lspdir = SanityDir(d,ignorecodes=[])
+    basename = filename.split('/')[-1]
+    path = filename.split('/')[:-1]
+    newpath = '/'.join(path)+'/local-'+basename
+    os.rename(filename, newpath) 
+    lspdir = SanityDir(d,ignorecodes=[])    
     lspdir.check()  
     #shutil.rmtree(d)
     return {'project': 'doc2tex',
